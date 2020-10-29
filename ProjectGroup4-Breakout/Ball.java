@@ -8,6 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Ball extends Actor
 {
+    int dy = 5;
+    int dx = 0;
     public Ball()
     {
         
@@ -18,6 +20,18 @@ public class Ball extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
-    }    
+        moveAround();
+        bounce();
+    }
+    public void moveAround()
+    {
+        setLocation(getX() + dx, getY() + dy);
+    }
+    public void bounce()
+    {
+        if(isTouching(Slider.class))
+        {
+            dy = -dy;
+        }
+    }
 }

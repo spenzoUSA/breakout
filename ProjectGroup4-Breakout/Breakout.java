@@ -20,7 +20,7 @@ public class Breakout extends World
         setBackground(new GreenfootImage("Placeholder.png"));
         addObject(new Levels(), 0, 0);
         addObject(new Slider(), 400, 445);
-        addObject(new Ball(), 0, 0);
+        addObject(new Ball(), 400, 350);
         setPaintOrder(Slider.class, Ball.class, Levels.class);
     }
     
