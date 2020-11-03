@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Breakout
-comment0.text=\r\n\ Default\ background.\ Levels\ will\ be\ superimposed\ over\ this.\r\n\ \r\n\ @author\ Spencer\ Riggins,\ Liz\ Soprano,\ Jason\ Bura,\ Caleb\ Williams\r\n\ @version\ v.01\r\n
+comment0.text=\n\ Default\ background.\ Levels\ will\ be\ superimposed\ over\ this.\n\ \n\ @author\ Spencer\ Riggins,\ Liz\ Soprano,\ Jason\ Bura,\ Caleb\ Williams\n\ @version\ v.01\n
 comment1.params=
 comment1.target=Breakout()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Breakout.\r\n\ \r\n
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Breakout.\n\ \n
 comment2.params=
 comment2.target=void\ act()
 numComments=3

@@ -8,30 +8,24 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Ball extends Actor
 {
-    int dy = 5;
-    int dx = 0;
+    /** The damage a ball deals to the level */
+    private int damage = 1;
+    
     public Ball()
     {
         
     }
+    
     /**
      * Act - do whatever the Ball wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        moveAround();
-        bounce();
-    }
-    public void moveAround()
-    {
-        setLocation(getX() + dx, getY() + dy);
-    }
-    public void bounce()
-    {
-        if(isTouching(Slider.class))
+        Levels level = (Levels) getOneIntersectingObject(Levels.class);
+        if (level != null) 
         {
-            dy = -dy;
+            level.hit(damage);
         }
-    }
+    }    
 }
