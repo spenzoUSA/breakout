@@ -10,10 +10,12 @@ public class Ball extends Actor
 {
     /** The damage a ball deals to the level */
     private int damage = 1;
+    private double dx, dy;
     
     public Ball()
     {
-        
+        dx = 0;
+        dy = -1;
     }
     
     /**
@@ -22,10 +24,40 @@ public class Ball extends Actor
      */
     public void act() 
     {
+        bounce();
+        moveAround();
         Levels level = (Levels) getOneIntersectingObject(Levels.class);
         if (level != null) 
         {
             level.hit(damage);
         }
-    }    
+    }
+    
+    /**
+     * 
+     */
+    public void moveAround()
+    {
+        setLocation(getX() + (int)(2 * dx), getY() + (int)(2 * dy));
+    }
+    
+    public void bounce()
+    {
+        if(isTouching(Slider.class))
+        {
+            dy *= -1;
+        }
+        else if(isTouching(Levels.class))
+        {
+            dy *= -1;
+        }
+        else if(getY() == 0)
+        {
+            dy *= -1;
+        }
+        else if(getX() == 0 || getX() == 808)
+        {
+            dx *= -1;
+        }
+    }
 }

@@ -29,7 +29,7 @@ public class Breakout extends World
         addObject(new Levels(), 688, 10);
         addObject(new Levels(), 769, 10);
         addObject(new Slider(), 404, 445);
-        addObject(new Ball(), 0, 0);
+        addObject(new Ball(), 404, 400);
         setPaintOrder(Slider.class, Ball.class, Levels.class);
     }
 
